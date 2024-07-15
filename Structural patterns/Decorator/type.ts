@@ -67,7 +67,3 @@ coffee.makeCoffee();
 console.log("\nCoffee with sugar:");
 coffee = new SugarDecorator(coffee);
 coffee.makeCoffee();
-
-console.log("\nCoffee with milk and sugar:");
-coffee = new MilkDecorator(coffee);
-coffee.makeCoffee();
