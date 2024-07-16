@@ -1,21 +1,3 @@
-// Абстрактный интерфейс фабрики
-interface CarrFactory {
-    createCarr(): Carr;
-}
-
-// Конкретные реализации фабрики
-class ToyotaFactory implements CarrFactory {
-    createCarr(): Carr {
-        return new Toyota();
-    }
-}
-
-class FordFactory implements CarrFactory {
-    createCarr(): Carr {
-        return new Ford();
-    }
-}
-
 // Абстрактный интерфейс продукта
 interface Carr {
     drive(): void;
@@ -31,6 +13,24 @@ class Toyota implements Carr {
 class Ford implements Carr {
     drive(): void {
         console.log("Driving a Ford");
+    }
+}
+
+// Абстрактный интерфейс фабрики
+interface CarrFactory {
+    createCarr(): Carr;
+}
+
+// Конкретные реализации фабрики
+class ToyotaFactory implements CarrFactory {
+    createCarr(): Carr {
+        return new Toyota();
+    }
+}
+
+class FordFactory implements CarrFactory {
+    createCarr(): Carr {
+        return new Ford();
     }
 }
 
